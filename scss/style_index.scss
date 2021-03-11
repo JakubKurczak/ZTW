@@ -1,0 +1,36 @@
+$main-fonts: "Roboto", "sant-serif";
+$font-color: #ffffff;
+
+body{
+    font-family: $main-fonts;
+    text-shadow: 0 0 5px #000000;
+    font-size: larger;
+    color: $font-color;
+    background-image: url("/images/index/vg.jpg");
+    background-size: cover;
+    margin: 0;
+    header{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1{
+            text-align: center;
+        }
+        
+        nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            h2{
+                transition: all 1s ease-out;
+            }
+
+            h2:hover{
+                text-shadow: 0 0 300px #00ff00;
+            }
+        }        
+        
+    }
+}
+

@@ -1,0 +1,31 @@
+body {
+  font-family: "Roboto", "sant-serif";
+  text-shadow: 0 0 5px #000000;
+  font-size: larger;
+  color: #ffffff;
+  background-image: url("/images/index/vg.jpg");
+  background-size: cover;
+  margin: 0;
+}
+body header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body header h1 {
+  text-align: center;
+}
+body header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+body header nav h2 {
+  transition: all 1s ease-out;
+}
+body header nav h2:hover {
+  text-shadow: 0 0 300px #00ff00;
+}
+
+/*# sourceMappingURL=style_index.css.map */
