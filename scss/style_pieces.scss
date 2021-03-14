@@ -1,4 +1,7 @@
 $grey: #dfe6e9;
+$darker-grey: #b2bec3;
+$dark-grey: #636e72;   
+
 $black: #000011;
 
 $border-color: $grey;
@@ -7,7 +10,20 @@ $main-fonts: "Roboto",
 "sant-serif";
 $font-color: $black;
 
+@keyframes fading-in{
+    0% {opacity: 0;}
+    15% {opacity: 0;}
+    30%{opacity: 1;}
+    100% {opacity: 1;}
+}
 
+@keyframes fading-out{
+    
+    0% {opacity: 1;}
+    45% {opacity: 0;}
+    80%{opacity: 0;}
+    100% {opacity: 1;}
+}
 
 @mixin rounded-corner($arc) {
     -moz-border-radius: $arc;
@@ -44,6 +60,8 @@ $font-color: $black;
 body {
     font-family: $main-fonts;
     color: $font-color;
+
+    background-color: $darker-grey;
 }
 
 .main-header{
@@ -51,7 +69,7 @@ body {
     position: fixed;
 
     color: $grey;
-    
+
     top: 0;
     left: 0;
     width: 100vw;
@@ -63,13 +81,13 @@ body {
 }
 
 .art-list{
-    margin-top: 20%;
+    margin-top: 25%;
 }
 
 
 .art-piece {
     @extend %rounded-corners-border;
-
+    background-color: $grey;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -79,6 +97,7 @@ body {
     @include margin-horizontal(30px);
 
     &:hover {
+        box-shadow: 0 0 50px #000011;
 
         .art-details {
             width: 50%;
@@ -90,6 +109,8 @@ body {
 
         img {
             width: 100%;
+            animation: fading-in 1s;
+            animation-iteration-count: 1;
         }
 
     }
@@ -101,16 +122,23 @@ body {
         justify-content: space-around;
 
         text-align: center;
+        
+        @include rounded-corner(15px);
     }
 
     img {
-        @extend%small-scaled-image;
+        @extend %small-scaled-image;
         @include rounded-corner(15px);
+        animation: fading-out 2s;
+    }
+
+    .description{
+        width: 60%;
     }
 }
 
 * { 
-    transition: all 2000ms ease; //with prefixes, of course
+    transition: all 1000ms ease; //with prefixes, of course
  }
 
  a{
