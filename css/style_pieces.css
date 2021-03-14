@@ -1,3 +1,76 @@
+.art-piece {
+  border: 1px solid #dfe6e9;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+}
 
+.art-piece img {
+  width: 20%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Roboto", "sant-serif";
+  color: #000011;
+}
+
+.main-header {
+  text-align: center;
+  position: fixed;
+  color: #dfe6e9;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 20%;
+  background-image: url("../images/pieces/header_backgroud.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.art-list {
+  margin-top: 20%;
+}
+
+.art-piece {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.art-piece:hover .art-details {
+  width: 50%;
+}
+.art-piece:hover .description {
+  width: 50%;
+}
+.art-piece:hover img {
+  width: 100%;
+}
+.art-piece .art-details {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+.art-piece img {
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+}
+
+* {
+  transition: all 2000ms ease;
+}
 
 /*# sourceMappingURL=style_pieces.css.map */

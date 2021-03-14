@@ -1,4 +1,6 @@
-body header a, body header a:active, body header a:focus {
+body header a,
+body header a:active,
+body header a:focus {
   text-decoration: none;
   color: inherit;
 }
