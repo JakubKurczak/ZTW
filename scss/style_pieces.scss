@@ -1,6 +1,6 @@
 $grey: #dfe6e9;
-$darker-grey: #b2bec3;
-$dark-grey: #636e72;   
+$darker-grey: #636e72 ;
+$dark-grey: #b2bec3;   
 
 $black: #000011;
 
@@ -61,27 +61,43 @@ body {
     font-family: $main-fonts;
     color: $font-color;
 
-    background-color: $darker-grey;
+    background-image: url("../images/pieces/header_backgroud.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
 .main-header{
     text-align: center;
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
-    color: $grey;
+    *{
+        margin: 0;
+    }
+
+    background-color: $grey;
+    color: $font-color;
+    box-shadow: 0 0 5px $black;
 
     top: 0;
     left: 0;
     width: 100vw;
-    height: 20%;
+    height: 10vh;
     
-    background-image: url("../images/pieces/header_backgroud.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    
 }
 
 .art-list{
-    margin-top: 25%;
+    padding-top: 10vh;
+    @include margin-horizontal(10vw);
+
+    background-color: $dark-grey;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0 0 10px $black
 }
 
 

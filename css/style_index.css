@@ -15,10 +15,10 @@ body {
   margin: 0;
 }
 body header {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100vh;
 }
 body header h1 {
   text-align: center;
