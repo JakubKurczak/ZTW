@@ -126,17 +126,24 @@
 }
 ul{
     position: relative;
-    width: 450px;
-    @include mp(100px auto 0,10px);
+    width: 1050px;
+    @include mp(50px auto 0,10px);
     box-sizing: border-box;
 
     li{
         @include mp(5px 0,10px 20px);
+        border-radius: 4px;
         display: flex;
         background: rgba(0,0,0,.1);
         color: $dark;
-        transition: 0.5s;
-
+        font-size: 2rem;
         @include darker;
+
+        span{
+            p{
+                @include mp(5px 0,10px 20px);
+                font-size: 1rem;
+            }
+        }
     }
 }
