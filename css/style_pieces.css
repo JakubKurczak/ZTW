@@ -57,6 +57,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   background-color: #dfe6e9;
   color: #000011;
   box-shadow: 0 0 5px #000011;
@@ -67,6 +70,18 @@ body {
 }
 .main-header * {
   margin: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.main-header h1 {
+  margin-left: 1rem;
+}
+.main-header h2 {
+  text-align: center;
+  width: 10vw;
+}
+.main-header h2:nth-child(2) {
+  margin-left: auto;
 }
 
 .art-list {
