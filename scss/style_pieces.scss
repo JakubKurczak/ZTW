@@ -1,6 +1,6 @@
 $grey: #dfe6e9;
-$darker-grey: #636e72 ;
-$dark-grey: #b2bec3;   
+$darker-grey: #636e72;
+$dark-grey: #b2bec3;
 $black: #000011;
 
 $border-color: $grey;
@@ -12,19 +12,41 @@ $font-color: $black;
 
 $animation-time: 1s;
 
-@keyframes fading-in{
-    0% {opacity: 0;}
-    15% {opacity: 0;}
-    30%{opacity: 1;}
-    100% {opacity: 1;}
+@keyframes fading-in {
+    0% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
-@keyframes fading-out{
-    
-    0% {opacity: 1;}
-    45% {opacity: 0;}
-    80%{opacity: 0;}
-    100% {opacity: 1;}
+@keyframes fading-out {
+
+    0% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @mixin rounded-corner($arc) {
@@ -33,12 +55,12 @@ $animation-time: 1s;
     border-radius: $arc;
 }
 
-@mixin margin-horizontal($px_val){
+@mixin margin-horizontal($px_val) {
     margin-left: $px_val;
     margin-right: $px_val;
 }
 
-@mixin margin-vertical($px_val){
+@mixin margin-vertical($px_val) {
     margin-top: $px_val;
     margin-bottom: $px_val;
 }
@@ -68,16 +90,38 @@ body {
 
 }
 
-.main-header{
+.main-header {
     text-align: center;
     position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 
-    *{
+    * {
         margin: 0;
+        margin-top: auto;
+        margin-bottom: auto;
     }
+
+    h1{
+        margin-left: 1rem;
+    }
+
+
+    h2 {
+        text-align: center;
+        &:nth-child(2){
+            margin-left: auto;
+        }
+
+        width: 10vw;
+
+    }
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
 
     background-color: $grey;
     color: $font-color;
@@ -87,11 +131,11 @@ body {
     left: 0;
     width: 100vw;
     height: 10vh;
-    
-    
+
+
 }
 
-.art-list{
+.art-list {
     padding-top: 10vh;
     @include margin-horizontal(10vw);
 
@@ -132,14 +176,14 @@ body {
 
     }
 
-    .art-details{
+    .art-details {
         width: 20%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
 
         text-align: center;
-        
+
         @include rounded-corner(15px);
     }
 
@@ -149,15 +193,15 @@ body {
         animation: fading-out $animation-time * 2;
     }
 
-    .description{
+    .description {
         width: 60%;
     }
 }
 
-* { 
+* {
     transition: all $animation-time ease; //with prefixes, of course
- }
+}
 
- a{
-     @extend %plain-tag;
- }
+a {
+    @extend %plain-tag;
+}
