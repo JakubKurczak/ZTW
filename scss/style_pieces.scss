@@ -1,14 +1,16 @@
 $grey: #dfe6e9;
 $darker-grey: #636e72 ;
 $dark-grey: #b2bec3;   
-
 $black: #000011;
 
 $border-color: $grey;
 
 $main-fonts: "Roboto",
 "sant-serif";
+
 $font-color: $black;
+
+$animation-time: 1s;
 
 @keyframes fading-in{
     0% {opacity: 0;}
@@ -49,7 +51,6 @@ $font-color: $black;
 %small-scaled-image {
     width: 20%;
     height: auto;
-
 }
 
 %plain-tag {
@@ -125,7 +126,7 @@ body {
 
         img {
             width: 100%;
-            animation: fading-in 1s;
+            animation: fading-in $animation-time;
             animation-iteration-count: 1;
         }
 
@@ -145,7 +146,7 @@ body {
     img {
         @extend %small-scaled-image;
         @include rounded-corner(15px);
-        animation: fading-out 2s;
+        animation: fading-out $animation-time * 2;
     }
 
     .description{
@@ -154,7 +155,7 @@ body {
 }
 
 * { 
-    transition: all 1000ms ease; //with prefixes, of course
+    transition: all $animation-time ease; //with prefixes, of course
  }
 
  a{
