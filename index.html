@@ -15,7 +15,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
   <!-- MDB -->
   <link rel="stylesheet" href="css/mdb.min.css" />
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+  
 </head>
 
 <body>
@@ -26,7 +29,7 @@
       <!-- Container wrapper -->
       <div class="container-fluid">
         <!-- Navbar brand -->
-        <a class="navbar-brand" href="#">Brand</a>
+        <a class="navbar-brand" href="#top">Podróże</a>
 
         <!-- Toggle button -->
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
@@ -40,40 +43,37 @@
           <!-- Left links -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#prop">Propozycje</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#Donut">Statystyki</a>
             </li>
             <!-- Navbar dropdown -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown"
                 aria-expanded="false">
-                Dropdown
+                Wiecej
               </a>
               <!-- Dropdown menu -->
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#spontan">Spontaniczna przygoda?</a></li>
+                <li><a class="dropdown-item" href="#FAQ">FAQ</a></li>
                 <li>
                   <hr class="dropdown-divider" />
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item" href="#kont">Kontakt</a>
                 </li>
               </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
           </ul>
           <!-- Left links -->
 
           <!-- Search form -->
           <form class="d-flex input-group w-auto">
-            <input type="search" class="form-control" placeholder="Type query" aria-label="Search" />
+            <input type="search" class="form-control" placeholder="Czego szukasz?" aria-label="Search" />
             <button class="btn btn-outline-primary" type="button" data-mdb-ripple-color="dark">
-              Search
+              Szukaj
             </button>
           </form>
         </div>
@@ -105,7 +105,7 @@
     </div>
   </header>
   <main>
-    <div class="container">
+    <div id="prop" class="container">
       <!--Section: LastTravels-->
       <section id="lastTravels" class="text-center">
         <div class="row">
@@ -117,7 +117,7 @@
                 <div class="mask rgba-blue-light"></div>
               </a>
             </div>
-            <h4 class="my-4 font-weight-bold">Podróż 1</h4>
+            <h4 class="my-4 font-weight-bold">Chiny</h4>
             <p class="grey-text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores n
               am, aperiam minima assumenda deleniti hic.
@@ -133,7 +133,7 @@
                 <div class="mask rgba-blue-light"></div>
               </a>
             </div>
-            <h4 class="my-4 font-weight-bold">Podróż 1</h4>
+            <h4 class="my-4 font-weight-bold">Meksyk</h4>
             <p class="grey-text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores n
               am, aperiam minima assumenda deleniti hic.
@@ -148,7 +148,7 @@
                 <div class="mask rgba-blue-light"></div>
               </a>
             </div>
-            <h4 class="my-4 font-weight-bold">Podróż 1</h4>
+            <h4 class="my-4 font-weight-bold">Hawaje</h4>
             <p class="grey-text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores n
               am, aperiam minima assumenda deleniti hic.
@@ -167,7 +167,7 @@
                 <div class="mask rgba-blue-light"></div>
               </a>
             </div>
-            <h4 class="my-4 font-weight-bold">Podróż 1</h4>
+            <h4 class="my-4 font-weight-bold">Japonia</h4>
             <p class="grey-text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores n
               am, aperiam minima assumenda deleniti hic.
@@ -182,7 +182,7 @@
                 <div class="mask rgba-blue-light"></div>
               </a>
             </div>
-            <h4 class="my-4 font-weight-bold">Podróż 1</h4>
+            <h4 class="my-4 font-weight-bold">Honolulu</h4>
             <p class="text-gray">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores n
               am, aperiam minima assumenda deleniti hic.
@@ -197,7 +197,7 @@
                 <div class="mask rgba-blue-light"></div>
               </a>
             </div>
-            <h4 class="my-4 font-weight-bold">Podróż 1</h4>
+            <h4 class="my-4 font-weight-bold">Madagaskar</h4>
             <p class="gray-text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores n
               am, aperiam minima assumenda deleniti hic.
@@ -229,7 +229,7 @@
             <div class="carousel-item active">
               <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg" class="d-block w-100" alt="..." />
               <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
+                <h5>Wzgórza</h5>
                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
               </div>
             </div>
@@ -238,7 +238,7 @@
             <div class="carousel-item">
               <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg" class="d-block w-100" alt="..." />
               <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
+                <h5>Pustynia</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
             </div>
@@ -247,7 +247,7 @@
             <div class="carousel-item">
               <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg" class="d-block w-100" alt="..." />
               <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
+                <h5>Morze</h5>
                 <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
               </div>
             </div>
@@ -271,26 +271,61 @@
       <!--Section: Gallery-->
       <hr class="my-5">
       <!--Section: Contact-->
-      <section id="contact">
-      </section>
+
       <!--Section: Contact-->
 
     </div>
-  </main>
+  
+ 
+      <h3 class="d-flex justify-content-center">Czy jesteś zadowolony ze swojej ostatniej podróży?</h3>
+      <div class="container">
+        
+          <canvas id="Donut"></canvas>
 
-  <footer>
+      </div>
+      </main>
+      <br>
+  <blockquote class="blockquote text-center">
+    <p class="mb-0" style="font-family: Lora;">"Prawdziwi podróżnicy to ci tylko, którzy wyruszają, aby wyruszyć"</p>
+    <br>
+    <footer class="blockquote-footer">Charles Baudelaire</footer>
+  </blockquote>
+  <div id="spontan" class="container" >
+    <div class="row justify-content-center">
+      <div class="col-sm-9 col-lg-7">
+        <img src="/img/tripPhoto.jpg" alt="trip">
+      </div>
+      <div class="col-sm-2 col-lg-2">
+        <h5>Spontaniczna przygoda?</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus omnis ut fugiat consectetur. Expedita fugiat
+          aperiam iste doloribus magnam neque aspernatur deserunt earum eius, dolore porro quam? Laboriosam rem doloribus
+          quibusdam distinctio molestias rerum. Officiis ullam quibusdam asperiores praesentium. Rerum doloremque porro dicta
+          eum ratione accusamus, rem culpa molestias officiis.</p>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center"><h1>Gdzie nas znajdziesz?</h1></div>
+<div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 100%; width: 100%;">
+  <div class="d-flex justify-content-center">
+  <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+    style="border:50%; height: 400px; width: 50%;" allowfullscreen></iframe>
+    </div>
+
+</div> 
+  
     <section id="FAQ">
       <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
             <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
               data-mdb-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              Accordion Item #1
+              Kto jest założycielem?
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
             data-mdb-parent="#accordionFlushExample">
             <div class="accordion-body">
+              <h3>Lorem ipsum dolor sit.</h3>
               Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
               richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
               brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
@@ -306,12 +341,13 @@
           <h2 class="accordion-header" id="flush-headingTwo">
             <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
               data-mdb-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              Accordion Item #2
+              Czy mogę zabrać zwierzę ze sobą?
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
             data-mdb-parent="#accordionFlushExample">
             <div class="accordion-body">
+              <h3>Lorem ipsum dolor sit.</h3>
               Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
               richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
               brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
@@ -327,12 +363,13 @@
           <h2 class="accordion-header" id="flush-headingThree">
             <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
               data-mdb-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              Accordion Item #3
+              Czy mogę zarezerwować przelot samemu?
             </button>
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
             data-mdb-parent="#accordionFlushExample">
             <div class="accordion-body">
+              <h3>Lorem ipsum dolor sit.</h3>
               Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
               richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
               brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
@@ -346,11 +383,45 @@
         </div>
       </div>
     </section>
-
+    <br>
+    <br>
+    <div id="kont" class="d-flex justify-content-center">
+    <h2>Kontakt</h2>
+    </div>
+    <footer>
+    <div class="d-flex justify-content-center">
+      
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="Podaj email">
+        <small id="emailHelp" class="form-text text-muted">Email nie będzie udostępniany osobą trzecim.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Temat</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Podaj temat kontaktu">
+      </div>
+      <br>
+      <div class="d-flex justify-content-center">
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Czy jesteś naszym klientem?</label>
+      </div>
+      </div>
+      <br>
+      <div class="d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary">Wyślij</button>
+      </div>
+    </form>
+    </div>
+    <br>
   </footer>
   <!-- End your project here-->
 
   <!-- MDB -->
+  <script type="text/javascript" src="/assets/vendor/chart.js/dist/Chart.min.js"></script>
+  <script type="text/javascript" src="/assets/vendor/chart.js/dist/Chart.extension.js"></script>
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <!-- Custom scripts -->
   <script type="text/javascript">
@@ -372,6 +443,19 @@
       document.execCommand("copy");
       document.body.removeChild(tempInput);
     }
+  </script>
+  <script>
+    let myChart = document.getElementById('Donut').getContext('2d');
+    let satCahrt = new Chart(myChart, {
+      type:'pie',
+      data:{
+        labels:['Tak', 'Nie', 'Ciężko powiedzieć'],
+        datasets:[{
+          data: [40, 50, 10],
+          backgroundColor: ['green', 'red', 'black']
+        }],
+      },
+    })
   </script>
 </body>
 
