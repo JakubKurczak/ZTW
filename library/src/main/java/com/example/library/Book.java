@@ -5,13 +5,23 @@ public class Book {
     private String title;
     private Author author;
     private int pages;
+    private boolean isBorrowed;
 
 
-    public Book(int id, String title, Author author, int pages) {
+    public Book(int id, String title, Author author, int pages, boolean isBorrowed) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.pages = pages;
+        this.isBorrowed = isBorrowed;
+    }
+
+    public boolean isBorrowed() {
+        return isBorrowed;
+    }
+
+    public void setBorrowed(boolean borrowed) {
+        isBorrowed = borrowed;
     }
 
     public int getId() {

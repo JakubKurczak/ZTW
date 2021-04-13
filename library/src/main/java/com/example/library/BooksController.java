@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.awt.geom.RectangularShape;
-
 @RestController
 public class BooksController {
 
@@ -28,13 +26,15 @@ public class BooksController {
 
     @RequestMapping(value = "delete/book/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Object> removeBook(@PathVariable("id") int id){
+        if(!bookService.isDeleteAllowed(id))
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         bookService.removeBook(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     //wdg mozilla to nie jest prawidłowy path
     //ale robie zgodnie z instrukcją
-    @RequestMapping(value = "change/book/title/{id}/{title}", method = RequestMethod.PUT)
+    @RequestMapping(value = "update/book/title/{id}/{title}", method = RequestMethod.PUT)
     public ResponseEntity<Object> changeBookTitle(@PathVariable("id") int id, @PathVariable("title") String title){
         bookService.changeBookTitle(id,title);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
@@ -42,7 +42,7 @@ public class BooksController {
 
     @RequestMapping(value = "create/book/{title}/{author}/{pages}", method = RequestMethod.POST)
     public ResponseEntity<Object> createBook( @PathVariable("title") String title, @PathVariable("author") int author, @PathVariable("pages") int pages){
-        bookService.addBook(title, author,pages);
+        bookService.addBook(title, author,pages, false);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 

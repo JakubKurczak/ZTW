@@ -8,10 +8,9 @@ import java.util.Collection;
 import java.util.List;
 
 @Service
-@EnableSwagger2
 public class AuthorService implements IAuthorService{
     static List<Author> authors = new ArrayList<>();
-    static int id_gen=0;
+    static int id_gen=1;
 
     @Override
     public Collection<Author> getAuthors() {
@@ -47,4 +46,5 @@ public class AuthorService implements IAuthorService{
         if(author != null)
             author.setLastName(lastName);
     }
+
 }

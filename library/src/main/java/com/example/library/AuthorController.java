@@ -36,13 +36,13 @@ public class AuthorController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @RequestMapping(value = "change/author/firstName/{id}/{firstName}", method = RequestMethod.PUT)
+    @RequestMapping(value = "update/author/firstName/{id}/{firstName}", method = RequestMethod.PUT)
     public ResponseEntity<Object> changeAuthorsFirstName(@PathVariable("id") int id, @PathVariable("firstName") String firstName){
         authorService.changeAuthorFirstName(id, firstName);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @RequestMapping(value = "change/author/lastName/{id}/{lastName}", method = RequestMethod.PUT)
+    @RequestMapping(value = "update/author/lastName/{id}/{lastName}", method = RequestMethod.PUT)
     public ResponseEntity<Object> changeAuthorsLastName(@PathVariable("id") int id, @PathVariable("lastName") String lastName){
         authorService.changeAuthorFirstName(id, lastName);
         return new ResponseEntity<>(HttpStatus.OK);
