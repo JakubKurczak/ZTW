@@ -34,16 +34,16 @@ public class UserController {
     @RequestMapping(value = "create/user/{username}", method = RequestMethod.POST)
     public ResponseEntity<Object> createUser( @PathVariable("username") String username){
         userService.addUser(username, new ArrayList());
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
     @RequestMapping(value = "update/user/book/borrow/{userId}/{bookId}", method = RequestMethod.PUT)
     public ResponseEntity<Object> addBookToUser( @PathVariable("userId") int userId, @PathVariable("bookId") int bookId){
         userService.addBookToUser(userId, bookId);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
     @RequestMapping(value = "update/user/book/return/{userId}/{bookId}", method = RequestMethod.PUT)
     public ResponseEntity<Object> deleteBookFromUser( @PathVariable("userId") int userId, @PathVariable("bookId") int bookId){
         userService.deleteBookFromUser(userId, bookId);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

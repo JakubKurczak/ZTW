@@ -21,6 +21,8 @@ public class UserService implements IUserService{
 
         bookService.addBook("Bogurodzica",1, 800, true);
         bookService.addBook("Rozmowa mistrza Polikarpa ze Śmiercią",1, 900, true);
+        bookService.addBook("Dobra książka",2, 200, false);
+        bookService.addBook("Słaba książka",2, 222, false);
 
         Collection<Book> borrowedBooks = new ArrayList<>();
         borrowedBooks.addAll(bookService.getBooks());
